@@ -1,4 +1,5 @@
 import { Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
@@ -12,7 +13,7 @@ export default function Hero() {
       <Text fontSize={"lg"} color="gray.400">
         Hi, my name is
       </Text>
-      <VStack spacing={"0px"} alignItems={"flex-start"}>
+      <VStack spacing={"5px"} alignItems={"flex-start"}>
         <Heading fontSize={"8xl"}>
           {" "}
           <Text color="#ffd60a" variant={"span"}>
@@ -21,7 +22,23 @@ export default function Hero() {
           gui Med Aziz.
         </Heading>
         <Heading fontSize={"6xl"} color="gray.400" lineHeight={"0.5"}>
-          I build stuff for the web.
+          <TypeAnimation
+            sequence={[
+              "Fullstack Developer.",
+              2000,
+              "I Build stuff for the web.", // Types 'One'
+              2000, //
+              "I Enjoy Learning new things.",
+              4000,
+              () => {
+                console.log("Done typing!"); // Place optional callbacks anywhere in the array
+              },
+            ]}
+            speed={20}
+            wrapper="div"
+            cursor={true}
+            repeat={Infinity}
+          />
         </Heading>
       </VStack>
       <Text w="80%" fontSize={"lg"} py="8">

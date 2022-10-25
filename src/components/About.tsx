@@ -10,9 +10,9 @@ import SwiperDots from "./SwiperDots";
 import Dots from "./Dots";
 export default function About() {
   const data = [
-    { title: "I am", content: "some bullshit" },
-    { title: "I Can", content: "some bullshit" },
-    { title: "I Enjoy", content: "some bullshit" },
+    { title: "I am", content: "lorem10" },
+    { title: "I Can", content: "Lorem10" },
+    { title: "I Enjoy", content: "Lorem10" },
   ];
 
   const [index, setIndex] = useState(0);
