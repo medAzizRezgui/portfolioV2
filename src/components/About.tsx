@@ -1,12 +1,4 @@
-import {
-  Box,
-  Text,
-  Heading,
-  HStack,
-  VStack,
-  Icon,
-  Circle,
-} from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
@@ -15,6 +7,7 @@ import "swiper/css/autoplay";
 import AboutData from "./AboutData";
 import SlideButton from "./SlideButton";
 import SwiperDots from "./SwiperDots";
+import Dots from "./Dots";
 export default function About() {
   const data = [
     { title: "I am", content: "some bullshit" },
@@ -70,26 +63,7 @@ export default function About() {
           bg="#22212C"
           border="2px solid white"
         >
-          <HStack w="100%" h="50px" px="4">
-            <Circle
-              transition={"all ease-in-out"}
-              transitionDuration={"0.4s"}
-              bg="#ef476f"
-              size={index === 0 ? "14px" : "8px"}
-            />
-            <Circle
-              transition={"all ease-in-out"}
-              transitionDuration={"0.4s"}
-              bg="#ffd166"
-              size={index === 1 ? "14px" : "8px"}
-            />
-            <Circle
-              transition={"all ease-in-out"}
-              transitionDuration={"0.4s"}
-              bg="#06d6a0"
-              size={index === 2 ? "14px" : "8px"}
-            />
-          </HStack>
+          <Dots index={index} />
           {data.map((item, i) => (
             <AboutData
               key={i}
