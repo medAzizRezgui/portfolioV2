@@ -35,7 +35,10 @@ const theme = extendTheme({
     themeCyan: "#4cc9f0",
     themeYellow: "#ffd60a",
   },
-  fonts: {},
+  fonts: {
+    heading: "Circular std book",
+    body: "Circular std book",
+  },
   components: {
     Container: {
       variants: {
