@@ -7,6 +7,7 @@ export default function Experiences() {
   const [tab, setTab] = useState(0);
   return (
     <VStack
+      id="exp"
       w="50%"
       mx="auto"
       h="100vh"
@@ -34,7 +35,9 @@ export default function Experiences() {
           <ExpTabs setTab={setTab} tab={tab} />
 
           {/* Work Data */}
-          <ExpWorkData tab={tab} />
+          <ExpWorkData tab={tab} id={0} />
+          <ExpWorkData tab={tab} id={1} />
+          <ExpWorkData tab={tab} id={2} />
         </HStack>
       </Box>
     </VStack>

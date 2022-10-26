@@ -1,4 +1,4 @@
-import { Button, HStack, Icon, Text } from "@chakra-ui/react";
+import { Button, HStack, Icon, Link, Text } from "@chakra-ui/react";
 import {
   TbUserExclamation,
   MdWorkOutline,
@@ -16,24 +16,39 @@ export default function Header() {
         justifyContent={"space-between"}
         fontSize="lg"
       >
-        <HStack>
-          <Icon as={TbUserExclamation} color="#4cc9f0" />
-          <Text>About </Text>
-        </HStack>
-        <HStack>
-          <Icon as={MdWorkOutline} color="#4cc9f0" />
-          <Text>Experiences</Text>
-        </HStack>
+        <Link href="#about">
+          <HStack>
+            <Icon as={TbUserExclamation} color="#4cc9f0" />
+            <Text>About </Text>
+          </HStack>
+        </Link>
+        <Link href="#exp">
+          <HStack>
+            <Icon as={MdWorkOutline} color="#4cc9f0" />
+            <Text>Experiences</Text>
+          </HStack>
+        </Link>
         <HStack>
           <Icon as={HiOutlineWrench} color="#4cc9f0" />
           <Text>Skills</Text>
         </HStack>
-        <HStack>
-          <Icon as={AiOutlineFundProjectionScreen} color="#4cc9f0" />
-          <Text>Projects</Text>
-        </HStack>
+        <Link href="#projects">
+          <HStack>
+            <Icon as={AiOutlineFundProjectionScreen} color="#4cc9f0" />
+            <Text>Projects</Text>
+          </HStack>
+        </Link>
       </HStack>
-      <Button px="6" py="2" bg="none" border="2px solid #ffd60a">
+      <Button
+        px="6"
+        py="2"
+        bg="none"
+        border="2px solid #ffd60a"
+        _hover={{
+          color: "white",
+          bg: "themeYellow",
+        }}
+      >
         Resume
       </Button>
     </HStack>

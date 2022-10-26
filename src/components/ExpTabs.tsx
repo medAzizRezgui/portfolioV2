@@ -32,7 +32,7 @@ export default function ExpTabs({ tab, setTab }: Props) {
           bg={tab === 0 ? "whiteAlpha.200" : "none"}
           justifyContent={"center"}
         >
-          <Text color={tab === 0 ? "themeCyan" : "gray.400"}>Work 1</Text>
+          <Text color={tab === 0 ? "themeCyan" : "gray.400"}>Freelance</Text>
         </HStack>
         <HStack
           bg={tab === 1 ? "whiteAlpha.200" : "none"}
@@ -42,7 +42,7 @@ export default function ExpTabs({ tab, setTab }: Props) {
           cursor={"pointer"}
           onClick={() => setTab(1)}
         >
-          <Text color={tab === 1 ? "themeCyan" : "gray.400"}>Work 2</Text>
+          <Text color={tab === 1 ? "themeCyan" : "gray.400"}>Internship</Text>
         </HStack>
         <HStack
           bg={tab === 2 ? "whiteAlpha.200" : "none"}
@@ -52,7 +52,7 @@ export default function ExpTabs({ tab, setTab }: Props) {
           cursor={"pointer"}
           onClick={() => setTab(2)}
         >
-          <Text color={tab === 2 ? "themeCyan" : "gray.400"}>Work 3</Text>
+          <Text color={tab === 2 ? "themeCyan" : "gray.400"}>Internship</Text>
         </HStack>
         <HStack
           cursor={"pointer"}

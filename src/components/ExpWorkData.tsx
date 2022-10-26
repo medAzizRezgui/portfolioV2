@@ -6,15 +6,15 @@ import styles from "../theme/customStyles.module.css";
 
 type Props = {
   tab: number;
+  id: number;
 };
-export default function ExpWorkData({ tab }: Props) {
+export default function ExpWorkData({ tab, id }: Props) {
   return (
     <VStack
       className={styles.animatePop}
       w="100%"
       alignItems={"flex-start"}
-      display={tab === 0 ? "flex" : "none"}
-      animation={"0.4s ease-in-out"}
+      display={tab === id ? "flex" : "none"}
     >
       <Text fontSize={"xl"}>
         Frontend Developer{" "}

@@ -5,6 +5,7 @@ import SocialBar from "./components/SocialBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Experiences from "./components/Experiences";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Hero />
       <About />
       <Experiences />
+      <Projects />
     </Container>
   );
 }

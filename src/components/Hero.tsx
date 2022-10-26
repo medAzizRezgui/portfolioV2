@@ -1,9 +1,10 @@
-import { Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
+import { Button, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   return (
     <VStack
+      id="hero"
       w="50%"
       mx="auto"
       h="90vh"
@@ -49,12 +50,45 @@ export default function Hero() {
       </Text>
 
       <HStack spacing="20px">
-        <Button px="6" py="2" bg="none" border="2px solid #ffd60a">
-          Contact Me
-        </Button>{" "}
-        <Button px="6" py="2" bg="none" border="2px solid #ffd60a">
-          Explore
-        </Button>
+        <Link
+          href="mailto:azizrezgui4@gmail.com"
+          isExternal
+          _hover={{
+            textDecoration: "dashed",
+          }}
+        >
+          <Button
+            px="6"
+            py="2"
+            bg="none"
+            border="2px solid #ffd60a"
+            _hover={{
+              color: "white",
+              bg: "themeYellow",
+            }}
+          >
+            Contact Me
+          </Button>{" "}
+        </Link>
+        <Link
+          href="#about"
+          _hover={{
+            textDecoration: "dashed",
+          }}
+        >
+          <Button
+            px="6"
+            py="2"
+            bg="none"
+            border="2px solid #ffd60a"
+            _hover={{
+              color: "white",
+              bg: "themeYellow",
+            }}
+          >
+            Explore
+          </Button>
+        </Link>
       </HStack>
     </VStack>
   );

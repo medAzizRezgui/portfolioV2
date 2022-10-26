@@ -18,6 +18,7 @@ export default function About() {
   const [index, setIndex] = useState(0);
   return (
     <Box
+      id="about"
       w="60%"
       mx="auto"
       h="100vh"
