@@ -6,7 +6,7 @@ type Props = {
 export default function SwiperDots({ index }: Props) {
   return (
     <HStack pb="20" justifyContent={"space-between"} w={"full"} px={2}>
-      <Heading>About</Heading>
+      <Heading fontFamily={"Noto Sans Mono"}> 01 - About</Heading>
       <HStack>
         <Box
           bg={index === 0 ? "gray.400" : "themeCyan"}
