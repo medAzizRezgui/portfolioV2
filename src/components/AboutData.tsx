@@ -1,23 +1,23 @@
-import { VStack, HStack, Box, Text } from "@chakra-ui/react";
+import { VStack, HStack, Box, Text, SlideFade } from "@chakra-ui/react";
 type Props = {
   index: Number;
   title: String;
   content: String;
   id: Number;
 };
+import styles from "../theme/customStyles.module.css";
 export default function AboutData({ index, title, id, content }: Props) {
   return (
     <Box
-      transition={"all ease-in-out"}
-      transitionDuration={"0.4s"}
       position="absolute"
       top="0px"
       w="100%"
       h="100%"
       p="8"
-      display={"flex"}
+      display={index === id ? "flex" : "none"}
       justifyContent="flex-start"
       alignItems={"center"}
+      className={styles.animateSlideDown}
     >
       <VStack alignItems={"flex-start"}>
         <Text
@@ -25,7 +25,6 @@ export default function AboutData({ index, title, id, content }: Props) {
           transition={"all ease-in-out"}
           transitionDuration={"0.4s"}
           fontSize="2xl"
-          opacity={index === id ? 1 : 0}
         >
           <Text variant={"span"} color="red">
             {"<"}
@@ -39,7 +38,6 @@ export default function AboutData({ index, title, id, content }: Props) {
           color="white"
           transition={"all ease-in-out"}
           transitionDuration={"0.4s"}
-          opacity={index === id ? 1 : 0}
         >
           {content}
         </Text>

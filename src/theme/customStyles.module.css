@@ -7,6 +7,29 @@
   }
   100% {
     opacity: 1;
+
+  }
+}
+
+
+
+.animateSlideDown{
+ 
+  animation: slideDown 0.3s linear;
+
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    top:-5%;
+ 
+  }
+  to {
+    opacity: 1;
+    top:0
+   
+   
   }
 }
 
