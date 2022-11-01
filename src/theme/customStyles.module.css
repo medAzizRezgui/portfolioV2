@@ -10,16 +10,35 @@
 
   }
 }
+.animateWow {
+  animation: wow 2s ease-in-out infinite;
+}
 
+@keyframes wow {
+  0%{
+    box-shadow: rgba(66, 66, 222, 0.62) 20px 50px 100px -20px;
+  }
+  50%{
+    box-shadow: rgba(119, 43, 73, 0.95) 0px 50px 100px -10px;
+
+  }
+  100%{
+    box-shadow: rgba(66, 66, 222, 0.62) 20px 50px 100px -20px;
+
+  }
+}
 .glassBg{
   background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
+
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.3px);
   -webkit-backdrop-filter: blur(3.3px);
   border: 1px solid rgba(255, 255, 255, 0.11);
 
 }
+
+
+
 
 .animateSlideDown{
  

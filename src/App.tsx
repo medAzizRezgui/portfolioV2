@@ -6,7 +6,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
-import styles from "./theme/customStyles.module.css";
 function App() {
   return (
     <Container variant={"responsive"} position="relative" h="100vh">
@@ -15,7 +14,6 @@ function App() {
       <EmailBar />
       <Hero />
       <About />
-      <Box className={styles.animateSlideDown} />
       <Experiences />
       <Projects />
     </Container>
