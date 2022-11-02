@@ -9,7 +9,7 @@ import gif from "../assets/gif.gif";
 const MagicCard = ({ profile }) => {
   return (
     <HStack w={"50%"} justifyContent={"center"} spacing={"-15px"}>
-      <VStack w={"50%"}>
+      <VStack w={"70%"}>
         <Box
           borderRadius={"80px 0px 80px 0px"}
           w={"100%"}
@@ -55,7 +55,7 @@ const MagicCard = ({ profile }) => {
           </HStack>
         </Box>
       </VStack>
-      <VStack w={"50%"}>
+      <VStack w={"70%"}>
         <Box
           bg={"white"}
           borderRadius={"0px 80px 0px 0px"}

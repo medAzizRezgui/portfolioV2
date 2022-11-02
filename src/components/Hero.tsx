@@ -1,69 +1,14 @@
-import {
-  Box,
-  Button,
-  Circle,
-  Heading,
-  HStack,
-  Icon,
-  Image,
-  Link,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Button, Heading, HStack, Link, Text, VStack } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { InitProfile } from "../utils/types";
-import me from "../assets/me.jpeg";
-import gif from "../assets/gif.gif";
-import styles from "../theme/customStyles.module.css";
-import { BsGithub } from "react-icons/all";
+
 import MagicCard from "./MagicCard";
 export default function Hero() {
   const [profile, setProfile] = useState(InitProfile);
   const [cont, setCont] = useState({});
 
-  async function getContributions(token: String, username: String) {
-    const headers = {
-      Authorization: `bearer ${token}`,
-    };
-    const body = {
-      query: `query {
-            user(login: "${username}") {
-              name
-              contributionsCollection {
-                contributionCalendar {
-                  colors
-                  totalContributions
-                  weeks {
-                    contributionDays {
-                      color
-                      contributionCount
-                      date
-                      weekday
-                    }
-                    firstDay
-                  }
-                }
-              }
-            }
-          }`,
-    };
-    const response = await fetch("https://api.github.com/graphql", {
-      method: "POST",
-      body: JSON.stringify(body),
-      headers: headers,
-    });
-    const data = await response.json();
-    return data;
-  }
-
-  useEffect(() => {
-    getContributions(
-      "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",
-      "medAzizRezgui"
-    ).then((r) => setCont(r.data.user));
-  }, []);
   console.log(cont);
   useEffect(() => {
     axios
