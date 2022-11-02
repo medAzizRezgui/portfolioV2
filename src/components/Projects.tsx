@@ -33,14 +33,19 @@ export default function Projects() {
   };
   useEffect(() => {
     setLoading(true);
-
+    axios
+      .get("https://api.github.com/users/medAzizRezgui", {
+        headers: {
+          Authorization: `Bearer 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`,
+        },
+      })
+      .then((r) => setProfile(r.data));
     axios
       .get(
-        `https://api.github.com/users/medAzizRezgui/repos?per_page=${perPage}&page=${page}&direction=desc&sort=stars`,
+        `https://api.github.com/users/medAzizRezgui/repos?per_page=${perPage}&page=${page}&direction=desc&sort=updated`,
         {
           headers: {
             Authorization: `Bearer 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`,
-            "Content-Type": "application/json",
           },
         }
       )
@@ -70,7 +75,7 @@ export default function Projects() {
       <HStack justifyContent={"space-between"} w="100%" alignItems={"center"}>
         <Heading fontFamily={"Noto Sans Mono"} py="16">
           {" "}
-          03 - Projects
+          03 - Open Source Projects
         </Heading>
         <Box
           w="50%"
