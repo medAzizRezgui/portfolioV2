@@ -34,14 +34,14 @@ export default function ExpWorkData({ tab, id }: Props) {
       <VStack px="4" py="8">
         <HStack alignItems={"start"}>
           <Icon as={BiChevronsRight} boxSize="24px" color="themeYellow" />
-          <Text>
+          <Text fontSize={{ md: "md", lg: "md" }}>
             Write modern, performant, maintainable code for a diverse array of
             client and internal projects
           </Text>
         </HStack>
         <HStack alignItems={"start"}>
           <Icon as={BiChevronsRight} boxSize="24px" color="themeYellow" />
-          <Text>
+          <Text fontSize={{ md: "md", lg: "md" }}>
             Write modern, performant, maintainable code for a diverse array of
             client and internal projects
           </Text>
@@ -52,7 +52,7 @@ export default function ExpWorkData({ tab, id }: Props) {
             boxSize="24px"
             color="themeCyan"
           />
-          <Text>
+          <Text fontSize={{ md: "md", lg: "md" }}>
             Write modern, performant, maintainable code for a diverse array of
             client and internal projects
           </Text>

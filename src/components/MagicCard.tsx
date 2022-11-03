@@ -8,8 +8,12 @@ import gif from "../assets/gif.gif";
 // @ts-ignore
 const MagicCard = ({ profile }) => {
   return (
-    <HStack w={"50%"} justifyContent={"center"} spacing={"-15px"}>
-      <VStack w={"70%"}>
+    <HStack
+      w={{ base: "100%", sm: "100%", lg: "100%", xl: "70%", "2xl": "50%" }}
+      justifyContent={"center"}
+      spacing={"-15px"}
+    >
+      <VStack w={"70%"} display={{ base: "none", sm: "block" }}>
         <Box
           borderRadius={"80px 0px 80px 0px"}
           w={"100%"}
@@ -55,10 +59,10 @@ const MagicCard = ({ profile }) => {
           </HStack>
         </Box>
       </VStack>
-      <VStack w={"70%"}>
+      <VStack w={{ base: "100%", sm: "70%" }}>
         <Box
           bg={"white"}
-          borderRadius={"0px 80px 0px 0px"}
+          borderRadius={{ base: "80px 80px 0px 0px", sm: "0px 80px 0px 0px" }}
           w={"calc(100% - 30px)"}
           transform={"auto"}
           translateY={"80px"}
@@ -69,7 +73,10 @@ const MagicCard = ({ profile }) => {
             <Box
               w={"100%"}
               h={"100%"}
-              bgImage={`url('${"https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=711&q=80"}')`}
+              bgImage={{
+                base: me,
+                sm: `url('${"https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=711&q=80"}')`,
+              }}
               bgPosition="center"
               bgRepeat="no-repeat"
               bgSize={"cover"}
@@ -79,6 +86,7 @@ const MagicCard = ({ profile }) => {
                 bg={"rgba(0,0,0,0.6)"}
                 w={"100%"}
                 h={"100%"}
+                display={{ base: "none", sm: "block" }}
                 position={"absolute"}
               ></Box>
               <VStack
@@ -88,6 +96,7 @@ const MagicCard = ({ profile }) => {
                 position={"absolute"}
                 px={2}
                 pt={8}
+                display={{ base: "none", sm: "flex" }}
               >
                 <Text textAlign={"start"} fontSize={"lg"} fontWeight={"medium"}>
                   +{profile.public_repos} Public Repos

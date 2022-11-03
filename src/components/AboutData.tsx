@@ -36,6 +36,8 @@ export default function AboutData({ index, title, id, content }: Props) {
         </Text>
         <Text
           color="white"
+          fontSize={{ base: "sm", lg: "md", xl: "lg" }}
+          lineHeight={{ base: "1.6", md: "1.8" }}
           transition={"all ease-in-out"}
           transitionDuration={"0.4s"}
         >

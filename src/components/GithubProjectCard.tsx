@@ -64,7 +64,7 @@ const GithubProjectCard = ({
             </Text>
           </HStack>
         </Link>
-        <Text textAlign={"start"}>
+        <Text textAlign={"start"} fontSize={{ md: "sm", lg: "md" }}>
           {desc
             ? desc
             : "                                                                                                                                                                                     "}

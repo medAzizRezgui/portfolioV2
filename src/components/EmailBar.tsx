@@ -2,7 +2,12 @@ import { Box, HStack, Icon, Link, Text, VStack } from "@chakra-ui/react";
 import { IoMailOutline } from "react-icons/all";
 export default function EmailBar() {
   return (
-    <Box position={"fixed"} bottom="0" right={"2rem"}>
+    <Box
+      position={"fixed"}
+      display={{ base: "none", md: "block" }}
+      bottom="0"
+      right={{ base: "1rem", md: "2rem" }}
+    >
       <VStack spacing="230px" alignItems={"flex-end"}>
         <a href="mailto:azizrezgui4@gmail.com" target="_blank">
           <HStack

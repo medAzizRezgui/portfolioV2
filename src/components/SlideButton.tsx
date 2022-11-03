@@ -6,7 +6,7 @@ type Props = {
 };
 export default function SlideButton({ title }: Props) {
   return (
-    <Box w="100%" mx="auto" borderRadius="8px" bg="themeCyan">
+    <Box w="100%" mx="auto" borderRadius="8px" bg="blue">
       <HStack
         spacing={"10px"}
         w="100%"

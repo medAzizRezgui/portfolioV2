@@ -8,7 +8,7 @@ export default function Experiences() {
   return (
     <VStack
       id="exp"
-      w="50%"
+      w={{ md: "90%", lg: "90%", xl: "85%", "2xl": "50%" }}
       mx="auto"
       h="100vh"
       display={"flex"}
@@ -17,7 +17,11 @@ export default function Experiences() {
       justifyContent={"center"}
     >
       <HStack justifyContent={"space-between"} w="100%" alignItems={"center"}>
-        <Heading fontFamily={"Noto Sans Mono"} py="16">
+        <Heading
+          fontFamily={"Noto Sans Mono"}
+          fontSize={{ lg: "2xl", xl: "4xl" }}
+          py="16"
+        >
           {" "}
           02 - Experiences
         </Heading>

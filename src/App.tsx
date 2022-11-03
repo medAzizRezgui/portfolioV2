@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 function App() {
   return (
     <Container variant={"responsive"} position="relative" h="100vh">
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Experiences />
       <Projects />
+      <Skills />
     </Container>
   );
 }

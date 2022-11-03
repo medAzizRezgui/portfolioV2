@@ -7,11 +7,23 @@ import {
 } from "react-icons/all";
 export default function Header() {
   return (
-    <HStack w="100%" justifyContent={"space-between"} h="10vh">
-      <Text fontSize={"5xl"}>Logo</Text>
+    <HStack
+      w="100%"
+      justifyContent={"space-between"}
+      position={"fixed"}
+      top={"0"}
+      left={"0"}
+      bg={"themeBg"}
+      zIndex={900}
+      px={"40px"}
+      h="10vh"
+      shadow={"md"}
+    >
+      <Text fontSize={{ sm: "4xl", md: "3xl", lg: "5xl" }}>Rez</Text>
 
       <HStack
-        spacing={"120px"}
+        display={{ base: "none", md: "flex" }}
+        spacing={{ sm: "10px", md: "20px", lg: "120px" }}
         w="50%"
         justifyContent={"space-between"}
         fontSize="lg"
@@ -28,10 +40,7 @@ export default function Header() {
             <Text>Experiences</Text>
           </HStack>
         </Link>
-        <HStack>
-          <Icon as={HiOutlineWrench} color="#4cc9f0" />
-          <Text>Skills</Text>
-        </HStack>
+
         <Link href="#projects">
           <HStack>
             <Icon as={AiOutlineFundProjectionScreen} color="#4cc9f0" />
