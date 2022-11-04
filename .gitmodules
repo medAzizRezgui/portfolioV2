@@ -1,0 +1,3 @@
+[submodule "dist"]
+  path = path_to_submodule
+  url = https://github.com/medAzizRezgui/portfolioV2
