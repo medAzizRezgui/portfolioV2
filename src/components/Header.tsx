@@ -5,6 +5,8 @@ import {
   HiOutlineWrench,
   AiOutlineFundProjectionScreen,
 } from "react-icons/all";
+
+import file from "../assets/rezgui med aziz CV.pdf";
 export default function Header() {
   return (
     <HStack
@@ -48,18 +50,21 @@ export default function Header() {
           </HStack>
         </Link>
       </HStack>
-      <Button
-        px="6"
-        py="2"
-        bg="none"
-        border="2px solid #ffd60a"
-        _hover={{
-          color: "white",
-          bg: "themeYellow",
-        }}
-      >
-        Resume
-      </Button>
+
+      <a href={file} download="Resume" target="_blank">
+        <Button
+          px="6"
+          py="2"
+          bg="none"
+          border="2px solid #ffd60a"
+          _hover={{
+            color: "white",
+            bg: "themeYellow",
+          }}
+        >
+          Resume
+        </Button>
+      </a>
     </HStack>
   );
 }

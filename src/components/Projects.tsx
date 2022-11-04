@@ -46,7 +46,7 @@ export default function Projects() {
           `https://api.github.com/users/medAzizRezgui/repos?per_page=${perPage}&page=${page}&direction=desc&sort=updated`,
           {
             headers: {
-              Authorization: `token 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`,
+              Authorization: `token ${import.meta.env.VITE_TOKEN}`,
               "Content-Type": "application/json",
             },
           }
