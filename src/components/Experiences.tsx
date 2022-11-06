@@ -3,15 +3,16 @@ import { useState } from "react";
 
 import ExpTabs from "./ExpTabs";
 import ExpWorkData from "./ExpWorkData";
+import ExpSwiper from "./ExpSwiper";
 export default function Experiences() {
   const [tab, setTab] = useState(0);
   return (
     <VStack
       id="exp"
-      w={{ md: "90%", lg: "90%", xl: "85%", "2xl": "50%" }}
+      w={{ base: "90%", md: "90%", lg: "90%", xl: "85%", "2xl": "50%" }}
       mx="auto"
       h="100vh"
-      display={"flex"}
+      display={{ base: "none", md: "flex" }}
       alignItems="start"
       px="8"
       justifyContent={"center"}

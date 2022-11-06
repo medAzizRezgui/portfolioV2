@@ -2,8 +2,8 @@ import { Box, Heading, HStack, Stack, VStack } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
-import { useState } from "react";
 import "swiper/css/autoplay";
+import { useState } from "react";
 import AboutData from "./AboutData";
 import SlideButton from "./SlideButton";
 import styles from "../theme/customStyles.module.css";
@@ -57,6 +57,7 @@ export default function About() {
       >
         {/* Swiper */}
         <VStack
+          mx={{ lg: "20px" }}
           w={{ base: "90%", sm: "90%", md: "60%", lg: "40%" }}
           h={{ base: "90%", sm: "100%", md: "100%", lg: "400px" }}
           spacing={{ base: "10px", sm: "20px", md: "10px", lg: "80px" }}

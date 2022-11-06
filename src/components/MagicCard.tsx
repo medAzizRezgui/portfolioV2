@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Circle, HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Circle,
+  HStack,
+  Icon,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import me from "../assets/me.jpeg";
 import styles from "../theme/customStyles.module.css";
 import { BsGithub } from "react-icons/all";
@@ -13,7 +21,7 @@ const MagicCard = ({ profile }) => {
       justifyContent={"center"}
       spacing={"-15px"}
     >
-      <VStack w={"70%"} display={{ base: "none", sm: "block" }}>
+      <VStack w={"70%"} display={{ base: "none", sm: "flex" }}>
         <Box
           borderRadius={"80px 0px 80px 0px"}
           w={"100%"}
@@ -43,20 +51,25 @@ const MagicCard = ({ profile }) => {
           <Text textAlign={"center"} py={2}>
             Source Code:
           </Text>
-          <HStack
-            cursor={"pointer"}
-            border={"2px solid "}
-            borderColor={"white"}
-            w={"60%"}
-            mx={"auto"}
-            borderRadius={"8px"}
-            py={1}
-            px={8}
-            justifyContent={"center"}
+          <Link
+            href="https://github.com/medAzizRezgui/portfolioV2"
+            isExternal={true}
           >
-            <Text color={"white"}>Visit</Text>
-            <Icon color={"white"} as={BsGithub} />
-          </HStack>
+            <HStack
+              cursor={"pointer"}
+              border={"2px solid "}
+              borderColor={"white"}
+              w={"60%"}
+              mx={"auto"}
+              borderRadius={"8px"}
+              py={1}
+              px={8}
+              justifyContent={"center"}
+            >
+              <Text color={"white"}>Visit</Text>
+              <Icon color={"white"} as={BsGithub} />
+            </HStack>
+          </Link>
         </Box>
       </VStack>
       <VStack w={{ base: "100%", sm: "70%" }}>

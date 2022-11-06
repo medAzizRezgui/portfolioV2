@@ -148,7 +148,13 @@ export default function Hero() {
           </Text>
           <VStack spacing={"5px"} alignItems={"flex-start"}>
             <Heading
-              fontSize={{ sm: "4xl", lg: "4xl", xl: "6xl", "2xl": "8xl" }}
+              fontSize={{
+                base: "3xl",
+                sm: "4xl",
+                lg: "4xl",
+                xl: "6xl",
+                "2xl": "8xl",
+              }}
             >
               {" "}
               <Text color="#ffd60a" variant={"span"}>
@@ -157,7 +163,13 @@ export default function Hero() {
               gui Med Aziz.
             </Heading>
             <Heading
-              fontSize={{ sm: "2xl", lg: "2xl", xl: "4xl", "2xl": "6xl" }}
+              fontSize={{
+                base: "xl",
+                sm: "2xl",
+                lg: "2xl",
+                xl: "4xl",
+                "2xl": "6xl",
+              }}
               color="gray.400"
               lineHeight={"0.5"}
             >

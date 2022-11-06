@@ -7,7 +7,7 @@ type Props = {
 };
 export default function ExpTabs({ tab, setTab }: Props) {
   return (
-    <HStack spacing="0">
+    <HStack spacing="0" display={{ base: "none", md: "flex" }}>
       <Box h="200px" w="2px" bg="gray.400" position={"relative"}>
         <Box
           bg="themeCyan"

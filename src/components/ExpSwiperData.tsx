@@ -1,21 +1,12 @@
-import { Box, HStack, Text, Icon, VStack } from "@chakra-ui/react";
-import { AiOutlineTool } from "react-icons/ai";
+import React from "react";
+import { HStack, Icon, Text, VStack } from "@chakra-ui/react";
+import styles from "../theme/customStyles.module.css";
 import { BiChevronsRight } from "react-icons/bi";
 import { HiOutlineInformationCircle } from "react-icons/hi";
-import styles from "../theme/customStyles.module.css";
 
-type Props = {
-  tab: number;
-  id: number;
-};
-export default function ExpWorkData({ tab, id }: Props) {
+const ExpSwiperData = () => {
   return (
-    <VStack
-      className={styles.animatePop}
-      w="100%"
-      alignItems={"flex-start"}
-      display={{ base: "none", md: tab === id ? "flex" : "none" }}
-    >
+    <VStack className={styles.animatePop} w="100%" alignItems={"flex-start"}>
       <Text fontSize={"xl"}>
         Frontend Developer{" "}
         <Text color="themeYellow" variant={"span"}>
@@ -60,4 +51,6 @@ export default function ExpWorkData({ tab, id }: Props) {
       </VStack>
     </VStack>
   );
-}
+};
+
+export default ExpSwiperData;

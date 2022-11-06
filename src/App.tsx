@@ -7,6 +7,7 @@ import About from "./components/About";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import ExpSwiper from "./components/ExpSwiper";
 function App() {
   return (
     <Container variant={"responsive"} position="relative" h="100vh">
@@ -15,6 +16,7 @@ function App() {
       <EmailBar />
       <Hero />
       <About />
+      <ExpSwiper />
       <Experiences />
       <Projects />
       <Skills />
