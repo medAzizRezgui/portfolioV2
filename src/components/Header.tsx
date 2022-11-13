@@ -6,7 +6,7 @@ import {
   AiOutlineFundProjectionScreen,
 } from "react-icons/all";
 
-import file from "../assets/rezgui med aziz CV.pdf";
+import file from "../assets/rezgui med aziz CV.png";
 export default function Header() {
   return (
     <HStack

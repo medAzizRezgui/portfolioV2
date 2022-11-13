@@ -12,11 +12,19 @@ export default function About() {
   const data = [
     {
       title: "A little about me",
-      content: `Hello! My name is Aziz and I enjoy designing and creating clean and appealing Interfaces and delivering a smooth and pleasant User experience.
-      My interest in web development started back in 2018 when I decided to find something that I genuinely love! I found out that my attention to details and my love for technology is perfect for me to start a journey as a developer.`,
+      content: `Hello! My name is Aziz and I enjoy creating clean and appealing Interfaces and delivering a smooth and pleasant User experience.
+      My interest in web development started back in 2018 when I decided to find something that I genuinely love! Now I am a full time developer.`,
     },
-    { title: "I Can", content: "Lorem10" },
-    { title: "I Enjoy", content: "Lorem10" },
+    {
+      title: "I Can",
+      content:
+        "Build dashboards, E-commerce websites, Landing pages, Interactive experiences, Social Media web apps, Stores and much more.\n I can be flexible and adapt to almost any situation.",
+    },
+    {
+      title: "I Enjoy",
+      content:
+        "Learning new technologies, I am always looking for a new way to fix a problem or build something with a new framework.",
+    },
   ];
 
   const [index, setIndex] = useState(0);

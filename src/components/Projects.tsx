@@ -1,78 +1,7 @@
-import {
-  Box,
-  Button,
-  Grid,
-  GridItem,
-  Heading,
-  HStack,
-  Spinner,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Heading, HStack, Link, VStack } from "@chakra-ui/react";
+import { TypeAnimation } from "react-type-animation";
 
-import { useEffect, useState } from "react";
-
-import axios from "axios";
-import styles from "../theme/customStyles.module.css";
-import { InitProfile } from "../utils/types";
-import GithubProjectCard from "./GithubProjectCard";
-import { useQuery } from "@tanstack/react-query";
-// import { Octokit } from "@octokit/rest";
 export default function Projects() {
-  const [perPage, setPerPage] = useState(4);
-  const [profile, setProfile] = useState(InitProfile);
-  const [repos, setRepos] = useState([]);
-  const [colors, setColors] = useState([]);
-
-  const page = 1;
-  const [loading, setLoading] = useState(false);
-
-  const hanldePages = async () => {
-    if (perPage === 4) {
-      await setPerPage(20);
-      await reposQuery.refetch();
-    } else if (perPage === 20) {
-      await setPerPage(100);
-      await reposQuery.refetch();
-    } else {
-      await setPerPage(4);
-      await reposQuery.refetch();
-    }
-  };
-  const reposQuery = useQuery({
-    queryKey: ["repos"],
-    queryFn: () => {
-      return axios
-        .get(
-          `https://api.github.com/users/medAzizRezgui/repos?per_page=${perPage}&page=${page}&direction=desc&sort=updated`,
-          {
-            headers: {
-              Authorization: `token ${import.meta.env.VITE_TOKEN}`,
-              "Content-Type": "application/json",
-            },
-          }
-        )
-        .then((response) => response.data);
-    },
-  });
-
-  useEffect(() => {
-    setLoading(true);
-    axios
-      .get("https://api.github.com/users/medAzizRezgui", {})
-      .then((r) => setProfile(r.data));
-
-    const getLang = async () => {
-      await axios
-        .get("https://github-lang-deploy.herokuapp.com/")
-        .then((r) => setColors(r.data));
-    };
-    getLang();
-
-    setLoading(false);
-  }, [perPage]);
-
-  // @ts-ignore
-  // @ts-ignore
   return (
     <VStack
       id="projects"
@@ -82,64 +11,57 @@ export default function Projects() {
       mb={"200px"}
       pt={"10vh"}
     >
-      <HStack justifyContent={"space-between"} w="100%" alignItems={"center"}>
+      {/* Heading */}
+      <HStack
+        justifyContent={"space-between"}
+        w="100%"
+        mb={"50px"}
+        alignItems={"center"}
+      >
         <Heading
           fontFamily={"Noto Sans Mono"}
-          fontSize={{ sm: "xl", lg: "2xl", xl: "4xl" }}
-          py="16"
+          fontSize={{ sm: "2xl", lg: "3xl", xl: "4xl" }}
         >
           {" "}
-          03 - Open Source Projects
+          03 - Projects
         </Heading>
         <Box
-          w="50%"
+          w={{ base: "40%", sm: "40%", lg: "20%", xl: "40%" }}
           h="1px"
           bg="gray.100"
           opacity={"0.5"}
           borderRadius={"8px"}
         />
       </HStack>
-      {!loading && colors && (
-        <Grid
-          pb={"40px"}
-          templateColumns={{ sm: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
-          gap={4}
-          w={"100%"}
-        >
-          {reposQuery.data?.map(
-            //  @ts-ignore
-            (repo, i) => (
-              <GridItem w="100%" className={styles.animatePop}>
-                <GithubProjectCard
-                  key={i}
-                  name={repo?.name}
-                  stargazers_count={repo?.stargazers_count}
-                  html_url={repo?.html_url}
-                  language={repo?.language}
-                  priv={repo?.private}
-                  //  @ts-ignore
-                  color={colors[repo?.language]?.color}
-                  desc={repo?.description}
-                />
-              </GridItem>
-            )
-          )}
-        </Grid>
-      )}
 
-      {reposQuery.isLoading || reposQuery.isRefetching ? (
-        <Button w={"100%"} bg={"blue"} onClick={() => hanldePages()}>
-          <Spinner />
-        </Button>
-      ) : (
-        <Button w={"100%"} bg={"blue"} onClick={() => hanldePages()}>
-          {!(reposQuery.isLoading || reposQuery.isRefetching) &&
-          perPage >= 4 &&
-          perPage < 100
-            ? "More"
-            : "Less"}
-        </Button>
-      )}
+      <Heading py={"8px"} fontSize={"3xl"}>
+        Projects are just source code for now, You can check them{" "}
+        <Link
+          borderBottom={"2px solid white"}
+          href="https://github.com/medAzizRezgui"
+        >
+          here.
+        </Link>
+      </Heading>
+      <Heading py={"8px"} fontSize={"3xl"}>
+        <TypeAnimation
+          sequence={[
+            "Some projects will be hosted",
+            2000,
+            "Some projects will be hosted & published", // Types 'One'
+            2000, //
+            "Some projects will be hosted & published soon...", // Types 'One'
+            2000, //
+            () => {
+              console.log("Done typing!"); // Place optional callbacks anywhere in the array
+            },
+          ]}
+          speed={20}
+          wrapper="div"
+          cursor={true}
+          repeat={Infinity}
+        />
+      </Heading>
     </VStack>
   );
 }

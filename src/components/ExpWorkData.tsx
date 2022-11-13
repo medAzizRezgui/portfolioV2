@@ -7,8 +7,23 @@ import styles from "../theme/customStyles.module.css";
 type Props = {
   tab: number;
   id: number;
+  title: string;
+  date: string;
+  det1: string;
+  det2: string;
+  det3: string;
+  location: string;
 };
-export default function ExpWorkData({ tab, id }: Props) {
+export default function ExpWorkData({
+  tab,
+  id,
+  det1,
+  det2,
+  det3,
+  date,
+  location,
+  title,
+}: Props) {
   return (
     <VStack
       className={styles.animatePop}
@@ -17,9 +32,9 @@ export default function ExpWorkData({ tab, id }: Props) {
       display={{ base: "none", md: tab === id ? "flex" : "none" }}
     >
       <Text fontSize={"xl"}>
-        Frontend Developer{" "}
+        {title}{" "}
         <Text color="themeYellow" variant={"span"}>
-          @ Vastsky123
+          @ {location}
         </Text>
       </Text>
       <Text
@@ -28,22 +43,20 @@ export default function ExpWorkData({ tab, id }: Props) {
         lineHeight="0.1"
         fontFamily={"Noto Sans Mono"}
       >
-        July 2022 - August 2022
+        {date}
       </Text>
 
-      <VStack px="4" py="8">
-        <HStack alignItems={"start"}>
+      <VStack px="4" py="8" alignItems={"start"}>
+        <HStack alignItems={"start"} justifyContent={"start"}>
           <Icon as={BiChevronsRight} boxSize="24px" color="themeYellow" />
-          <Text fontSize={{ md: "md", lg: "md" }}>
-            Write modern, performant, maintainable code for a diverse array of
-            client and internal projects
+          <Text textAlign={"start"} fontSize={{ md: "md", lg: "lg" }}>
+            {det1}
           </Text>
         </HStack>
         <HStack alignItems={"start"}>
           <Icon as={BiChevronsRight} boxSize="24px" color="themeYellow" />
-          <Text fontSize={{ md: "md", lg: "md" }}>
-            Write modern, performant, maintainable code for a diverse array of
-            client and internal projects
+          <Text textAlign={"start"} fontSize={{ md: "md", lg: "lg" }}>
+            {det2}
           </Text>
         </HStack>
         <HStack alignItems={"start"}>
@@ -52,10 +65,7 @@ export default function ExpWorkData({ tab, id }: Props) {
             boxSize="24px"
             color="themeCyan"
           />
-          <Text fontSize={{ md: "md", lg: "md" }}>
-            Write modern, performant, maintainable code for a diverse array of
-            client and internal projects
-          </Text>
+          <Text fontSize={{ md: "md", lg: "lg" }}>{det3}</Text>
         </HStack>
       </VStack>
     </VStack>

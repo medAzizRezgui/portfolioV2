@@ -18,6 +18,7 @@ export default function AboutData({ index, title, id, content }: Props) {
       justifyContent="flex-start"
       alignItems={"center"}
       className={styles.animateSlideDown}
+      mt={"10px"}
     >
       <VStack alignItems={"flex-start"}>
         <Text
