@@ -8,8 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
-import social_app from "../assets/proj1.png";
-import proj2 from "../assets/proj2.png";
+import social_app from "../assets/proj1.webp";
+import proj2 from "../assets/proj2.webp";
 export default function Projects() {
   return (
     <VStack
@@ -43,7 +43,7 @@ export default function Projects() {
         />
       </HStack>
 
-      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"}>
+      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"} w={"full"}>
         <Heading py={"8px"} fontSize={"3xl"}>
           Social Media App
         </Heading>
@@ -58,7 +58,7 @@ export default function Projects() {
           </Button>
         </Link>
       </Box>
-      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"}>
+      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"} w={"full"}>
         <Heading py={"8px"} fontSize={"3xl"}>
           Spotify Clone
         </Heading>
