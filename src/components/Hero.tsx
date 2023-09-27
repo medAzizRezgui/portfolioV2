@@ -29,7 +29,7 @@ import {
   SiFirebase, SiGraphql,
   SiMongodb,
   SiNextdotjs,
-  SiNodedotjs,
+  SiNodedotjs, SiPostgresql,
   SiRedux, SiSupabase,
   SiTypescript,
   SiVite,
@@ -135,6 +135,12 @@ export default function Hero() {
       text: "Supabase",
       icon:SiSupabase,
       color: "#3ECF8E",
+      textColor: "white",
+    },
+    {
+      text: "PostgreSQL",
+      icon:SiPostgresql,
+      color: "#336791",
       textColor: "white",
     }
   ];
