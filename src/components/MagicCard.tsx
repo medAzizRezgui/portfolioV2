@@ -8,7 +8,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import me from "../assets/me.jpeg";
+import me from "../assets/me.png";
 import styles from "../theme/customStyles.module.css";
 import { BsGithub } from "react-icons/all";
 import gif from "../assets/gif.gif";
