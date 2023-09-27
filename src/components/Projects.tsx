@@ -1,6 +1,15 @@
-import { Box, Heading, HStack, Link, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  HStack,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { TypeAnimation } from "react-type-animation";
-
+import social_app from "../assets/proj1.png";
+import proj2 from "../assets/proj2.png";
 export default function Projects() {
   return (
     <VStack
@@ -34,8 +43,39 @@ export default function Projects() {
         />
       </HStack>
 
+      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"}>
+        <Heading py={"8px"} fontSize={"3xl"}>
+          Social Media App
+        </Heading>
+        <img src={social_app} alt={"project"} width={"800px"} />
+        <Text pt={"20px"}>
+          A social media app where you can post text and images, like and
+          comment, receive live notifications, and more.
+        </Text>
+        <Link href={"https://github.com/medAzizRezgui/RootSpace"}>
+          <Button bg={"gray"} my={"20px"}>
+            Source Code
+          </Button>
+        </Link>
+      </Box>
+      <Box border={"2px"} p={8} rounded={"8px"} mx={"auto"}>
+        <Heading py={"8px"} fontSize={"3xl"}>
+          Spotify Clone
+        </Heading>
+        <img src={proj2} alt={"project"} width={"800px"} />
+        <Text pt={"20px"}>
+          A Spotify Clone project for personal learning, It supports uploading
+          and streaming music, a fully functional payment system with Stripe,
+          and more.
+        </Text>
+        <Link href={"https://github.com/medAzizRezgui/spotify-clone"}>
+          <Button bg={"gray"} my={"20px"}>
+            Source Code
+          </Button>
+        </Link>
+      </Box>
       <Heading py={"8px"} fontSize={"3xl"}>
-        Projects are just source code for now, You can check them{" "}
+        More Projects are just source code for now, You can check them{" "}
         <Link
           borderBottom={"2px solid white"}
           href="https://github.com/medAzizRezgui"

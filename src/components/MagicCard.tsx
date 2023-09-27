@@ -115,7 +115,7 @@ const MagicCard = ({ profile }) => {
                   +{profile.public_repos} Public Repos
                 </Text>
                 <Text textAlign={"start"} fontSize={"lg"} fontWeight={"medium"}>
-                  +10 Personal Projects
+                  +5 Personal Projects
                 </Text>
                 <Text fontSize={"lg"} fontWeight={"medium"} textAlign={"start"}>
                   +3 Years Of Experience

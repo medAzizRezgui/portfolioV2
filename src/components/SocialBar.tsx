@@ -80,7 +80,7 @@ export default function SocialBar() {
               cursor="pointer"
             />
           </Link>
-          <Link href="https://wa.me/+21692222079" isExternal>
+          <Link href="https://wa.me/+21654222783" isExternal>
             <Icon
               as={BsWhatsapp}
               boxSize="28px"

@@ -26,14 +26,14 @@ import {
   GiTable,
   SiChakraui,
   SiExpress,
-  SiFirebase,
+  SiFirebase, SiGraphql,
   SiMongodb,
   SiNextdotjs,
   SiNodedotjs,
-  SiRedux,
+  SiRedux, SiSupabase,
   SiTypescript,
   SiVite,
-  SiWebstorm,
+  SiWebstorm
 } from "react-icons/all";
 export default function Hero() {
   const [profile, setProfile] = useState(InitProfile);
@@ -125,6 +125,18 @@ export default function Hero() {
       color: "#303030",
       textColor: "white",
     },
+    {
+      text: "GraphQl",
+      icon:SiGraphql,
+      color:"#E535AB",
+      textColor: "white",
+    },
+    {
+      text: "Supabase",
+      icon:SiSupabase,
+      color: "#3ECF8E",
+      textColor: "white",
+    }
   ];
   return (
     <VStack minH={"90vh"} mt={"10vh"} w={"100%"} mx={"auto"}>
