@@ -65,21 +65,21 @@ export default function SocialBar() {
               cursor="pointer"
             />
           </Link>
-          <Link href="https://www.facebook.com/Rezguiaziz99/" isExternal>
-            <Icon
-              as={FiFacebook}
-              boxSize="28px"
-              opacity="0.7"
-              transform={"auto"}
-              transition="all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s"
-              _hover={{
-                translateY: "-5px",
-                opacity: 1,
-                color: "themeCyan",
-              }}
-              cursor="pointer"
-            />
-          </Link>
+          {/*<Link href="https://www.facebook.com/Rezguiaziz99/" isExternal>*/}
+          {/*  <Icon*/}
+          {/*    as={FiFacebook}*/}
+          {/*    boxSize="28px"*/}
+          {/*    opacity="0.7"*/}
+          {/*    transform={"auto"}*/}
+          {/*    transition="all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s"*/}
+          {/*    _hover={{*/}
+          {/*      translateY: "-5px",*/}
+          {/*      opacity: 1,*/}
+          {/*      color: "themeCyan",*/}
+          {/*    }}*/}
+          {/*    cursor="pointer"*/}
+          {/*  />*/}
+          {/*</Link>*/}
           <Link href="https://wa.me/+21654222783" isExternal>
             <Icon
               as={BsWhatsapp}
